@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Luxé Café - Where taste meets royalty" data-ar="مقهى لوكس - حيث يلتقي الطعم بالملكية">Luxé Café - Where taste meets royalty</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cairo+Play:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/Style/variables.css">
+    <link rel="stylesheet" href="src/Style/main.css">
+    <link rel="stylesheet" href="src/Style/splash.css">
+</head>
+<body class="dark-theme">
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen active">
+        <div class="splash-content">
+            <h1 class="typing-text" id="splash-text">Luxé Café</h1>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg luxury-navbar fixed-top">
+        <div class="container">
+            <div class="navbar-brand-section d-flex align-items-center">
+                <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop" alt="Logo" class="logo me-2">
+                <span class="brand-name" data-en="Luxé Café" data-ar="مقهى لوكس">Luxé Café</span>
+                
+                <!-- Theme and Language Controls -->
+                <div class="navbar-controls-inline ms-3">
+                    <!-- Language Toggle -->
+                    <button class="btn luxury-btn-outline me-3" id="lang-toggle">
+                        <span id="lang-text">عربي</span>
+                    </button>
+                    
+                    <!-- Theme Toggle -->
+                    <button class="btn luxury-btn-outline" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="navbar-nav-container">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-en="About" data-ar="عنا">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="src/Pages/menu.html" data-en="Menu" data-ar="القائمة">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="src/Pages/login.html" data-en="Admin" data-ar="صفحة الإدارة">Admin</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-en="About" data-ar="عنا">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="src/Pages/menu.html" data-en="Menu" data-ar="القائمة">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="src/Pages/login.html" data-en="Admin" data-ar="صفحة الإدارة">Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section parallax-bg">
+        <div class="hero-overlay"></div>
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="hero-content text-center">
+                <h1 class="hero-title animate-fade-in" data-en="Luxé Café" data-ar="مقهى لوكس">Luxé Café</h1>
+                <p class="hero-subtitle animate-fade-in-delay" data-en="Where taste meets royalty" data-ar="حيث يلتقي الطعم بالملكية">Where taste meets royalty</p>
+                <a href="src/Pages/menu.html" class="btn luxury-btn-primary animate-fade-in-delay-2" data-en="Visit Our Menu" data-ar="زور قائمتنا">Visit Our Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-bg-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="luxury-icon mb-4">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h2 class="section-title" data-en="About Our Legacy" data-ar="عن إرثنا">About Our Legacy</h2>
+                    <p class="section-description" data-en="Experience the finest blend of tradition and luxury at Luxé Café. Every cup tells a story of excellence, every bite is a journey to perfection." data-ar="اختبر أفضل مزيج من التقليد والفخامة في مقهى لوكس. كل كوب يحكي قصة التميز، كل قضمة رحلة إلى الكمال.">
+                        Experience the finest blend of tradition and luxury at Luxé Café. Every cup tells a story of excellence, every bite is a journey to perfection.
+                    </p>
+                    <div class="luxury-decorations">
+                        <i class="fas fa-coffee"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-gem"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact-info text-center">
+                        <h2 class="section-title" data-en="Visit Us" data-ar="زورونا">Visit Us</h2>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-en="123 Luxury Avenue, Cairo, Egypt" data-ar="١٢٣ شارع الفخامة، القاهرة، مصر">123 Luxury Avenue, Cairo, Egypt</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+20 123 456 7890</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>hello@luxecafe.com</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="luxury-footer">
+        <div class="container text-center">
+            <div class="footer-brand mb-3">
+                <span class="brand-name" data-en="Luxé Café" data-ar="مقهى لوكس">Luxé Café</span>
+            </div>
+            <div class="footer-credit">
+                <span data-en="Powered by Mosa" data-ar="مشغل بواسطة موسى">Powered by Mosa</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="src/Js/lang.js"></script>
+    <script src="src/Js/theme.js"></script>
+    
+    <script>
+        // Initialize splash screen
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.getElementById('splash-screen').classList.remove('active');
+            }, 3000);
+        });
+
+        // Back to top functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Parallax effect
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-section');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // Close mobile menu when clicking on nav links
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarCollapse = document.getElementById('navbarNav');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

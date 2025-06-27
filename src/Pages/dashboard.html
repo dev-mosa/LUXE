@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Admin Dashboard - Luxé Café" data-ar="لوحة الإدارة - مقهى لوكس">Admin Dashboard - Luxé Café</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cairo+Play:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../Style/variables.css">
+    <link rel="stylesheet" href="../Style/main.css">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg luxury-navbar fixed-top">
+        <div class="container">
+            <div class="navbar-brand-section d-flex align-items-center">
+                <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop" alt="Logo" class="logo me-2">
+                <span class="brand-name" data-en="Luxé Café" data-ar="مقهى لوكس">Luxé Café</span>
+                
+                <!-- Theme and Language Controls -->
+                <div class="navbar-controls-inline ms-3">
+                    <!-- Language Toggle -->
+                    <button class="btn luxury-btn-outline me-2" id="lang-toggle">
+                        <span id="lang-text">عربي</span>
+                    </button>
+                    
+                    <!-- Theme Toggle -->
+                    <button class="btn luxury-btn-outline" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="navbar-nav-container">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html" data-en="Menu" data-ar="القائمة">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-en="Dashboard" data-ar="لوحة التحكم">Dashboard</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-controls">
+                    <!-- Logout Button -->
+                    <button class="btn luxury-btn-outline" onclick="window.location.href='login.html'">
+                        <i class="fas fa-sign-out-alt me-1"></i>
+                        <span data-en="Logout" data-ar="تسجيل الخروج">Logout</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html" data-en="Menu" data-ar="القائمة">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-en="Dashboard" data-ar="لوحة التحكم">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn luxury-btn-outline mt-2" onclick="window.location.href='login.html'">
+                            <i class="fas fa-sign-out-alt me-1"></i>
+                            <span data-en="Logout" data-ar="تسجيل الخروج">Logout</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+        <div class="dashboard-header-bg"></div>
+        <div class="container">
+            <div class="py-5">
+                <h1 class="page-title" data-en="Admin Dashboard" data-ar="لوحة الإدارة">Admin Dashboard</h1>
+                <p class="page-subtitle" data-en="Manage your luxury café with ease" data-ar="إدارة مقهاك الفاخر بسهولة">Manage your luxury café with ease</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-content">
+        <div class="container">
+            <!-- Dashboard Tabs -->
+            <div class="dashboard-tabs-container">
+                <ul class="nav nav-tabs luxury-tabs" id="dashboardTabs">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#add-product">
+                            <i class="fas fa-plus-circle me-2"></i>
+                            <span data-en="Add Product" data-ar="إضافة منتج">Add Product</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#manage-products">
+                            <i class="fas fa-edit me-2"></i>
+                            <span data-en="Manage Products" data-ar="إدارة المنتجات">Manage Products</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#delete-products">
+                            <i class="fas fa-trash me-2"></i>
+                            <span data-en="Delete Products" data-ar="حذف المنتجات">Delete Products</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Add Product Tab -->
+                <div class="tab-pane fade show active" id="add-product">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 data-en="Add New Product" data-ar="إضافة منتج جديد">Add New Product</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="add-product-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label" data-en="Product Name (English)" data-ar="اسم المنتج (إنجليزي)">Product Name (English)</label>
+                                            <input type="text" class="form-control luxury-input" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label" data-en="Product Name (Arabic)" data-ar="اسم المنتج (عربي)">Product Name (Arabic)</label>
+                                            <input type="text" class="form-control luxury-input" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label" data-en="Price (EGP)" data-ar="السعر (جنيه)">Price (EGP)</label>
+                                            <input type="number" class="form-control luxury-input" min="0" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label class="form-label" data-en="Category" data-ar="الفئة">Category</label>
+                                            <select class="form-select luxury-input" required>
+                                                <option value="" data-en="Select Category" data-ar="اختر الفئة">Select Category</option>
+                                                <option value="hot-drinks" data-en="Hot Drinks" data-ar="المشروبات الساخنة">Hot Drinks</option>
+                                                <option value="frappe" data-en="Frappé" data-ar="فرابيه">Frappé</option>
+                                                <option value="fresh-juices" data-en="Fresh Juices" data-ar="العصائر الطازجة">Fresh Juices</option>
+                                                <option value="milkshakes" data-en="Milkshakes" data-ar="الميلك شيك">Milkshakes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label" data-en="Description" data-ar="الوصف">Description</label>
+                                    <textarea class="form-control luxury-input" rows="3"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn luxury-btn-primary">
+                                    <i class="fas fa-plus me-2"></i>
+                                    <span data-en="Add Product" data-ar="إضافة منتج">Add Product</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manage Products Tab -->
+                <div class="tab-pane fade" id="manage-products">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 data-en="Manage Products" data-ar="إدارة المنتجات">Manage Products</h3>
+                            <div class="search-box">
+                                <input type="text" class="form-control luxury-input" id="search-products" placeholder="Search products...">
+                                <i class="fas fa-search search-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table luxury-table">
+                                    <thead>
+                                        <tr>
+                                            <th data-en="Product Name" data-ar="اسم المنتج">Product Name</th>
+                                            <th data-en="Category" data-ar="الفئة">Category</th>
+                                            <th data-en="Price (EGP)" data-ar="السعر (جنيه)">Price (EGP)</th>
+                                            <th data-en="Actions" data-ar="الإجراءات">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="products-table">
+                                        <tr>
+                                            <td>Royal Espresso / إسبريسو ملكي</td>
+                                            <td data-en="Hot Drinks" data-ar="المشروبات الساخنة">Hot Drinks</td>
+                                            <td>
+                                                <input type="number" class="form-control luxury-input price-input" value="45" min="0">
+                                            </td>
+                                            <td>
+                                                <button class="btn luxury-btn-outline btn-sm save-price">
+                                                    <i class="fas fa-save"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Golden Caramel Frappé / فرابيه الكراميل الذهبي</td>
+                                            <td data-en="Frappé" data-ar="فرابيه">Frappé</td>
+                                            <td>
+                                                <input type="number" class="form-control luxury-input price-input" value="70" min="0">
+                                            </td>
+                                            <td>
+                                                <button class="btn luxury-btn-outline btn-sm save-price">
+                                                    <i class="fas fa-save"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Royal Orange Juice / عصير البرتقال الملكي</td>
+                                            <td data-en="Fresh Juices" data-ar="العصائر الطازجة">Fresh Juices</td>
+                                            <td>
+                                                <input type="number" class="form-control luxury-input price-input" value="40" min="0">
+                                            </td>
+                                            <td>
+                                                <button class="btn luxury-btn-outline btn-sm save-price">
+                                                    <i class="fas fa-save"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Decadent Chocolate / شوكولاتة فاخرة</td>
+                                            <td data-en="Milkshakes" data-ar="الميلك شيك">Milkshakes</td>
+                                            <td>
+                                                <input type="number" class="form-control luxury-input price-input" value="65" min="0">
+                                            </td>
+                                            <td>
+                                                <button class="btn luxury-btn-outline btn-sm save-price">
+                                                    <i class="fas fa-save"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delete Products Tab -->
+                <div class="tab-pane fade" id="delete-products">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3 data-en="Delete Products" data-ar="حذف المنتجات">Delete Products</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table luxury-table">
+                                    <thead>
+                                        <tr>
+                                            <th data-en="Product Name" data-ar="اسم المنتج">Product Name</th>
+                                            <th data-en="Category" data-ar="الفئة">Category</th>
+                                            <th data-en="Price (EGP)" data-ar="السعر (جنيه)">Price (EGP)</th>
+                                            <th data-en="Actions" data-ar="الإجراءات">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="delete-products-table">
+                                        <tr>
+                                            <td>Royal Espresso / إسبريسو ملكي</td>
+                                            <td data-en="Hot Drinks" data-ar="المشروبات الساخنة">Hot Drinks</td>
+                                            <td>45 EGP</td>
+                                            <td>
+                                                <button class="btn btn-danger btn-sm delete-product">
+                                                    <i class="fas fa-trash me-1"></i>
+                                                    <span data-en="Delete" data-ar="حذف">Delete</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Golden Caramel Frappé / فرابيه الكراميل الذهبي</td>
+                                            <td data-en="Frappé" data-ar="فرابيه">Frappé</td>
+                                            <td>70 EGP</td>
+                                            <td>
+                                                <button class="btn btn-danger btn-sm delete-product">
+                                                    <i class="fas fa-trash me-1"></i>
+                                                    <span data-en="Delete" data-ar="حذف">Delete</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Royal Orange Juice / عصير البرتقال الملكي</td>
+                                            <td data-en="Fresh Juices" data-ar="العصائر الطازجة">Fresh Juices</td>
+                                            <td>40 EGP</td>
+                                            <td>
+                                                <button class="btn btn-danger btn-sm delete-product">
+                                                    <i class="fas fa-trash me-1"></i>
+                                                    <span data-en="Delete" data-ar="حذف">Delete</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Decadent Chocolate / شوكولاتة فاخرة</td>
+                                            <td data-en="Milkshakes" data-ar="الميلك شيك">Milkshakes</td>
+                                            <td>65 EGP</td>
+                                            <td>
+                                                <button class="btn btn-danger btn-sm delete-product">
+                                                    <i class="fas fa-trash me-1"></i>
+                                                    <span data-en="Delete" data-ar="حذف">Delete</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="luxury-footer">
+        <div class="container text-center">
+            <div class="footer-brand mb-3">
+                <span class="brand-name" data-en="Luxé Café" data-ar="مقهى لوكس">Luxé Café</span>
+            </div>
+            <div class="footer-credit">
+                <span data-en="Powered by Mosa" data-ar="مشغل بواسطة موسى">Powered by Mosa</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../Js/lang.js"></script>
+    <script src="../Js/theme.js"></script>
+    <script src="../Js/admin.js"></script>
+    
+    <script>
+        // Back to top functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Close mobile menu when clicking on nav links
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarCollapse = document.getElementById('navbarNav');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+:root {
+  /* Brand Configuration */
+  --brand-name: "Luxé Café";
+  --logo-path: "../imgs/logo.png";
+  --slogan-en: "Where taste meets royalty";
+  --slogan-ar: "حيث يلتقي الطعم بالملكية";
+  
+  /* Color System */
+  --primary-gold: #D4AF37;
+  --primary-gold-light: #FFD700;
+  --primary-gold-dark: #B8860B;
+  --secondary-white: #FFFFFF;
+  --secondary-ivory: #F5F5DC;
+  
+  /* Dark Theme Colors */
+  --dark-bg-primary: #0B0B0B;
+  --dark-bg-secondary: #1A1A1A;
+  --dark-bg-tertiary: #2D2D2D;
+  --dark-text-primary: #FFFFFF;
+  --dark-text-secondary: #CCCCCC;
+  --dark-border: #333333;
+  
+  /* Light Theme Colors */
+  --light-bg-primary: #F5F5DC;
+  --light-bg-secondary: #FFFFFF;
+  --light-bg-tertiary: #F0F0F0;
+  --light-text-primary: #2D2D2D;
+  --light-text-secondary: #666666;
+  --light-border: #E0E0E0;
+  
+  /* Typography */
+  --font-english: 'Playfair Display', serif;
+  --font-arabic: 'Cairo Play', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* Spacing System (8px base) */
+  --spacing-1: 0.5rem;   /* 8px */
+  --spacing-2: 1rem;     /* 16px */
+  --spacing-3: 1.5rem;   /* 24px */
+  --spacing-4: 2rem;     /* 32px */
+  --spacing-5: 2.5rem;   /* 40px */
+  --spacing-6: 3rem;     /* 48px */
+  --spacing-8: 4rem;     /* 64px */
+  --spacing-10: 5rem;    /* 80px */
+  --spacing-12: 6rem;    /* 96px */
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --shadow-gold: 0 0 20px rgba(212, 175, 55, 0.3);
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  
+  /* Z-Index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+}
+
+/* RTL Support Variables */
+[dir="rtl"] {
+  --text-align-start: right;
+  --text-align-end: left;
+  --margin-start: margin-right;
+  --margin-end: margin-left;
+  --padding-start: padding-right;
+  --padding-end: padding-left;
+  --border-start: border-right;
+  --border-end: border-left;
+}
+
+[dir="ltr"] {
+  --text-align-start: left;
+  --text-align-end: right;
+  --margin-start: margin-left;
+  --margin-end: margin-right;
+  --padding-start: padding-left;
+  --padding-end: padding-right;
+  --border-start: border-left;
+  --border-end: border-right;
+}

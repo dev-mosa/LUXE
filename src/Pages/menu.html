@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Menu - Luxé Café" data-ar="القائمة - مقهى لوكس">Menu - Luxé Café</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cairo+Play:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../Style/variables.css">
+    <link rel="stylesheet" href="../Style/main.css">
+</head>
+<body class="dark-theme">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg luxury-navbar fixed-top">
+        <div class="container">
+            <div class="navbar-brand-section d-flex align-items-center">
+                <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop" alt="Logo" class="logo me-2">
+                <span class="brand-name" data-en="Luxé Café" data-ar="مقهى لوكس">Luxé Café</span>
+                
+                <!-- Theme and Language Controls -->
+                <div class="navbar-controls-inline ms-3">
+                    <!-- Language Toggle -->
+                    <button class="btn luxury-btn-outline me-2" id="lang-toggle">
+                        <span id="lang-text">عربي</span>
+                    </button>
+                    
+                    <!-- Theme Toggle -->
+                    <button class="btn luxury-btn-outline" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="navbar-nav-container">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-en="Menu" data-ar="القائمة">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" data-en="Admin" data-ar="صفحة الإدارة">Admin</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-controls">
+                    <!-- Back to Home Button -->
+                    <button class="btn luxury-btn-outline" onclick="window.location.href='../../index.html'">
+                        <i class="fas fa-arrow-left me-1"></i>
+                        <span data-en="Back to Home" data-ar="العودة للرئيسية">Back to Home</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-en="Menu" data-ar="القائمة">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html" data-en="Admin" data-ar="صفحة الإدارة">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn luxury-btn-outline mt-2" onclick="window.location.href='../../index.html'">
+                            <i class="fas fa-arrow-left me-1"></i>
+                            <span data-en="Back to Home" data-ar="العودة للرئيسية">Back to Home</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+        <div class="menu-header-bg"></div>
+        <div class="container">
+            <div class="text-center py-5">
+                <h1 class="page-title" data-en="Our Exquisite Menu" data-ar="قائمتنا الرائعة">Our Exquisite Menu</h1>
+                <p class="page-subtitle" data-en="Discover our carefully curated selection of premium beverages" data-ar="اكتشف مجموعتنا المختارة بعناية من المشروبات المميزة">Discover our carefully curated selection of premium beverages</p>
+                
+                <!-- Back to Home Button under heading -->
+                <button class="btn luxury-btn-primary mt-3" onclick="window.location.href='../../index.html'">
+                    <i class="fas fa-home me-2"></i>
+                    <span data-en="Back to Home" data-ar="العودة للرئيسية">Back to Home</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Content -->
+    <section class="menu-content">
+        <div class="container">
+            <!-- Hot Drinks Section -->
+            <div class="menu-category mb-5">
+                <div class="category-header" data-bs-toggle="collapse" data-bs-target="#hotDrinks">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-mug-hot category-icon me-3"></i>
+                        <h2 class="category-title" data-en="Hot Drinks" data-ar="المشروبات الساخنة">Hot Drinks</h2>
+                    </div>
+                    <i class="fas fa-chevron-down collapse-icon"></i>
+                </div>
+                
+                <div class="collapse" id="hotDrinks">
+                    <div class="category-content">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Royal Espresso" data-ar="إسبريسو ملكي">Royal Espresso</h4>
+                                        <p class="item-description" data-en="Rich, bold espresso with a golden crema" data-ar="إسبريسو غني وجريء مع كريما ذهبية">Rich, bold espresso with a golden crema</p>
+                                        <div class="item-price">45 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Luxury Cappuccino" data-ar="كابتشينو فاخر">Luxury Cappuccino</h4>
+                                        <p class="item-description" data-en="Perfect balance of espresso and steamed milk" data-ar="توازن مثالي من الإسبريسو والحليب المبخر">Perfect balance of espresso and steamed milk</p>
+                                        <div class="item-price">55 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Turkish Delight Coffee" data-ar="قهوة تركية بالراحة">Turkish Delight Coffee</h4>
+                                        <p class="item-description" data-en="Traditional Turkish coffee with a modern twist" data-ar="قهوة تركية تقليدية بلمسة عصرية">Traditional Turkish coffee with a modern twist</p>
+                                        <div class="item-price">65 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frappé Section -->
+            <div class="menu-category mb-5">
+                <div class="category-header" data-bs-toggle="collapse" data-bs-target="#frappe">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-snowflake category-icon me-3"></i>
+                        <h2 class="category-title" data-en="Frappé Collection" data-ar="مجموعة الفرابيه">Frappé Collection</h2>
+                    </div>
+                    <i class="fas fa-chevron-down collapse-icon"></i>
+                </div>
+                
+                <div class="collapse" id="frappe">
+                    <div class="category-content">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Golden Caramel Frappé" data-ar="فرابيه الكراميل الذهبي">Golden Caramel Frappé</h4>
+                                        <p class="item-description" data-en="Iced coffee with rich caramel swirls" data-ar="قهوة مثلجة مع دوامات الكراميل الغنية">Iced coffee with rich caramel swirls</p>
+                                        <div class="item-price">70 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Royal Mocha Frappé" data-ar="فرابيه الموكا الملكي">Royal Mocha Frappé</h4>
+                                        <p class="item-description" data-en="Chocolate and coffee in perfect harmony" data-ar="الشوكولاتة والقهوة في انسجام مثالي">Chocolate and coffee in perfect harmony</p>
+                                        <div class="item-price">75 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Vanilla Bean Frappé" data-ar="فرابيه الفانيليا">Vanilla Bean Frappé</h4>
+                                        <p class="item-description" data-en="Smooth vanilla with premium coffee blend" data-ar="فانيليا ناعمة مع خليط القهوة المميز">Smooth vanilla with premium coffee blend</p>
+                                        <div class="item-price">68 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fresh Juices Section -->
+            <div class="menu-category mb-5">
+                <div class="category-header" data-bs-toggle="collapse" data-bs-target="#freshJuices">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-leaf category-icon me-3"></i>
+                        <h2 class="category-title" data-en="Fresh Juices" data-ar="العصائر الطازجة">Fresh Juices</h2>
+                    </div>
+                    <i class="fas fa-chevron-down collapse-icon"></i>
+                </div>
+                
+                <div class="collapse" id="freshJuices">
+                    <div class="category-content">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Royal Orange Juice" data-ar="عصير البرتقال الملكي">Royal Orange Juice</h4>
+                                        <p class="item-description" data-en="Freshly squeezed premium oranges" data-ar="برتقال مميز معصور طازج">Freshly squeezed premium oranges</p>
+                                        <div class="item-price">40 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Berry Royale" data-ar="بيري رويال">Berry Royale</h4>
+                                        <p class="item-description" data-en="Mixed berries with a touch of mint" data-ar="خليط التوت مع لمسة النعناع">Mixed berries with a touch of mint</p>
+                                        <div class="item-price">55 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Green Goddess" data-ar="الإلهة الخضراء">Green Goddess</h4>
+                                        <p class="item-description" data-en="Detox blend with spinach, apple, and ginger" data-ar="خليط ديتوكس بالسبانخ والتفاح والزنجبيل">Detox blend with spinach, apple, and ginger</p>
+                                        <div class="item-price">50 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Milkshakes Section -->
+            <div class="menu-category mb-5">
+                <div class="category-header" data-bs-toggle="collapse" data-bs-target="#milkshakes">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-ice-cream category-icon me-3"></i>
+                        <h2 class="category-title" data-en="Luxury Milkshakes" data-ar="ميلك شيك فاخر">Luxury Milkshakes</h2>
+                    </div>
+                    <i class="fas fa-chevron-down collapse-icon"></i>
+                </div>
+                
+                <div class="collapse" id="milkshakes">
+                    <div class="category-content">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Decadent Chocolate" data-ar="شوكولاتة فاخرة">Decadent Chocolate</h4>
+                                        <p class="item-description" data-en="Rich Belgian chocolate with vanilla ice cream" data-ar="شوكولاتة بلجيكية غنية مع آيس كريم الفانيليا">Rich Belgian chocolate with vanilla ice cream</p>
+                                        <div class="item-price">65 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Strawberry Bliss" data-ar="نعيم الفراولة">Strawberry Bliss</h4>
+                                        <p class="item-description" data-en="Fresh strawberries with creamy vanilla" data-ar="فراولة طازجة مع فانيليا كريمية">Fresh strawberries with creamy vanilla</p>
+                                        <div class="item-price">60 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-4">
+                                <div class="menu-item">
+                                    <div class="item-info">
+                                        <h4 class="item-name" data-en="Cookies & Cream Dream" data-ar="حلم الكوكيز والكريم">Cookies & Cream Dream</h4>
+                                        <p class="item-description" data-en="Oreo cookies blended with premium ice cream" data-ar="كوكيز الأوريو ممزوج مع آيس كريم مميز">Oreo cookies blended with premium ice cream</p>
+                                        <div class="item-price">70 EGP</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="luxury-footer">
+        <div class="container text-center">
+            <div class="footer-brand mb-3">
+                <span class="brand-name" data-en="Luxé Café" data-ar="مقهى لوكس">Luxé Café</span>
+            </div>
+            <div class="footer-credit">
+                <span data-en="Powered by Mosa" data-ar="مشغل بواسطة موسى">Powered by Mosa</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../Js/lang.js"></script>
+    <script src="../Js/theme.js"></script>
+    
+    <script>
+        // Back to top functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Collapse icon rotation and exclusive section opening
+        document.querySelectorAll('.category-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const icon = this.querySelector('.collapse-icon');
+                const targetId = this.getAttribute('data-bs-target');
+                const targetElement = document.querySelector(targetId);
+                
+                // Close all other sections
+                document.querySelectorAll('.menu-category .collapse').forEach(collapse => {
+                    if (collapse !== targetElement && collapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(collapse, {toggle: false});
+                        bsCollapse.hide();
+                        
+                        // Reset other icons
+                        const otherHeader = collapse.previousElementSibling;
+                        const otherIcon = otherHeader.querySelector('.collapse-icon');
+                        otherIcon.classList.remove('rotated');
+                    }
+                });
+                
+                // Toggle current icon
+                setTimeout(() => {
+                    if (targetElement.classList.contains('show')) {
+                        icon.classList.add('rotated');
+                    } else {
+                        icon.classList.remove('rotated');
+                    }
+                }, 100);
+            });
+        });
+
+        // Close mobile menu when clicking on nav links
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarCollapse = document.getElementById('navbarNav');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

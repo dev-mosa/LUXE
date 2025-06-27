@@ -1,0 +1,71 @@
+/* Splash Screen Styles */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.splash-screen.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.splash-content {
+  text-align: center;
+}
+
+.typing-text {
+  font-family: var(--font-english);
+  font-size: var(--font-size-5xl);
+  font-weight: 700;
+  color: var(--primary-gold);
+  overflow: hidden;
+  border-right: 3px solid var(--primary-gold);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 2s steps(10, end), blink-caret 0.75s step-end infinite;
+  text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking Cursor */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary-gold);
+  }
+}
+
+/* Responsive Splash */
+@media (max-width: 768px) {
+  .typing-text {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 576px) {
+  .typing-text {
+    font-size: var(--font-size-2xl);
+  }
+}
